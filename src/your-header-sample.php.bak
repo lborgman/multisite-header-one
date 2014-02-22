@@ -1,5 +1,5 @@
 <nav id="mh1">
-  <a id="mh1-title" href="http://ourcomments.org/psyblog/">OurComments on Psychology </a>
+  <a id="mh1-title" href="http://ourcomments.org/psyblog/">Our Comments on Psychology </a>
       <div id="mh1-hamburger">
         <div></div>
         <div></div>
@@ -10,10 +10,10 @@
         <ul>
           <li>
             <a href="http://ourcomments.org/psyblog/about/"
-               title="Read about OurComments on Psychology"
+               title="Read about Our Comments on Psychology"
                >
               About
-              <span class="mh1-menu-details"> - Read about OurComments on Psychology</span>
+              <span class="mh1-menu-details"> - Read about Our Comments on Psychology</span>
             </a>
           </li>
           <li>
@@ -28,24 +28,10 @@
       <nav id="mh1-search">
         <ul>
           <li>
-            <span id="mh1-search-psyblog-span">
-              <input type="text"
-                     id="mh1-search-psyblog"
-                     placeholder="Search all blogs"
-                     />
-              <a href="http://ourcomments.org/psyblog/about/"
-                 class="mh1-help"
-                 title="Help for Search OurComments on Psychology"
-                 >?</a>
-              <span class="mh1-menu-details"> - Search in our reference database with psychology related links.</span>
-            </span>
-          </li>
-          <li>
             <span id="mh1-zotero-search">
-              <input type="text" size="10" id="mh1-search-zotero"
-                     placeholder="Search Zotero - From Some Psychologists" />
+  <input type="text" size="10" id="mh1-search-zotero" placeholder="Search Zotero" />
               <a href="http://ourcomments.org/psyblog/about-the-zotero-library-p/"
-                 class="mh1-help"
+     id="mh1-zothelp"
      title="Help for Search Zotero"
      >?</a>
               <span class="mh1-menu-details"> - Search in our reference database with psychology related links.</span>
@@ -68,7 +54,7 @@
 
 #mh1 {
     position:absolute;
-    z-index: 400 !important; /* wp toolbar 500 */
+    z-index: 400 !important;
     top:0;
     left:0!important;
     right:0 ! important;
@@ -79,17 +65,8 @@
     font-familiy: Arial !important;
 }
 #mh1 * { box-sizing: border-box !important; }
-
-#mh1 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #ccc!important;
-}
-#mh1 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #ccc!important;
-}
-#mh1 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #ccc!important;
-}
-
+#mh1 input[type="text"] { display: inline-block !important; }
+#mh1 input { margin: 0 !important; }
 #mh1 a {
     color: #AC0404!important;
     text-decoration: none!important;
@@ -97,31 +74,48 @@
 #mh1 a:hover {
     color: #6D1D1D!important;
 }
-#mh1 a#mh1-title {
+a#mh1-title {
     font-weight: bold!important;
+    text-shadow: 1px 1px 2px rgba(1, 19, 46, 0.47)!important;
     color: #930!important;
-    text-shadow: 1px 1px 1px rgba(1, 19, 46, 0.47)!important;
 }
-#mh1 a#mh1-title:hover {
-    transition: all 0.5s ease-in-out;
+a#mh1-title:hover {
     text-decoration: none!important;
-    color: #FCFC16!important;
-    text-shadow: 1px 1px 1px rgba(1, 19, 46, 0.37)!important;
+    color: #FCD046!important;
 }
-#mh1 a.mh1-help {
+a#mh1-zothelp {
     background-color:#E49403!important;
     border-radius: 6px!important;
     padding-left:3px!important;
     padding-right:3px!important;
-    color: #eee!important;
+    color: #ccc!important;
 }
-#mh1 a.mh1-help:hover {
+a#mh1-zothelp:hover {
     text-decoration: none!important;
     color: black!important;
 }
+#mh1-search-zotero {
+    padding: 2px!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    border-width: 1px!important;
+    border-radius: 5px!important;
+    background-color: #FDE2AF!important;
+    width: 110px!important;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ccc!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ccc!important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ccc!important;
+}
 
 /* Mobile style menu icon */
-#mh1 #mh1-hamburger {
+#mh1-hamburger {
     float: right !important;
     margin: 0 !important;
     margin-right: 4px !important;
@@ -138,7 +132,7 @@
 }
 
 /* The white stripes in the hamburger button */
-#mh1 #mh1-hamburger div {
+#mh1-hamburger div {
     background-color: #FDE2AF !important;
     border: 1px solid #eee !important;
     border-radius: 2px 2px 2px 2px !important;
@@ -155,89 +149,54 @@
     list-style-type: none !important;
     list-style-image: none !important;
 }
-#mh1 ul li {
+#mh1 li {
     padding: 0 !important;
     margin: 0 !important;
 }
-#mh1 ul li > * { display: inline-block !important; }
+#mh1 li > * { display: inline-block !important; }
 
-/* #mh1 * { z-index: inherit !important; } */
-
-#mh1 #mh1-menus {
+#mh1-menus {
     float: right !important;
-    transition: all 0.7s ease-in-out !important;
+    transition: height 0.7s ease-in-out !important;
     z-index: 400 !important;
 }
 
-#mh1 input[type="text"] {
-    display: inline-block !important;
-    margin: 0 !important;
-    padding: 2px!important;
-    padding-top: 0px!important;
-    padding-bottom: 0px!important;
-    border-width: 1px!important;
-    border-radius: 5px!important;
-    background-color: #FDE2AF!important;
-}
-#mh1 input[type="text"]:hover {
-    background-color: rgb(255, 255, 255) !important;
-}
-#mh1 input[type="text"]:focus {
-    background-color: rgb(255, 255, 255) !important;
-}
-
-
 /* Screen width adjustments */
-@media screen and ( min-width: 700px ) {
-    #mh1 #mh1-hamburger { display: none !important; }
-    #mh1 #mh1-menus {
+@media screen and ( min-width: 546px ) {
+    #mh1-hamburger { display: none !important; }
+    #mh1-menus {
         position: static !important;
         display: inline-block !important;
         overflow: visible !important;
-        width: 460px !important;
+        width: 340px !important;
         float: right !important;
     }
-    #mh1 #mh1-menu {
+    #mh1-menu {
         display: inline-block !important;
         position: static !important;
+        margin-left: 40px !important;
+        z-index: 400 !important;
         background-color: transparent !important;
         width: 120px !important;
     }
-    #mh1 #mh1-search {
-        display: inline-block;
-        position: static;
+    #mh1-search {
+        display: inline-block !important;
+        position: static !important;
         margin-right: 8px !important;
+        z-index: 400 !important;
         background-color: transparent !important;
-        width: 300px !important;
-        float: align: right;
+        width: 155px !important;
     }
     #mh1 ul { display: inline-block !important; }
-    #mh1 ul li { display: inline-block !important; border: none !important; }
-    #mh1 ul li > * { display: inline-block !important; padding: 0 !important; margin-left: 20px !important; }
-    #mh1 #mh1-search { float: right !important; }
+    #mh1 li { display: inline-block !important; border: none !important; }
+    #mh1 li > * { display: inline-block !important; padding: 0 !important; margin-left: 20px !important; }
+    #mh1-search { float: right !important; }
 
-    #mh1 .mh1-menu-details { display: none !important; }
-
-    #mh1 input[type="text"] {
-        width: 110px!important;
-    }
-    #mh1 input[type="text"]:focus {
-        transition: all 0.7s ease-in-out !important;
-        width: 280px !important;
-        padding: 4px !important;
-    }
-    #mh1 input[type="text"]#mh1-search-psyblog:focus {
-        background-position: right !important;
-        background-repeat: no-repeat !important;
-        background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif);
-    }
-    #mh1 input[type="text"]:hover {
-        transition: all 0.5s ease-in-out !important;
-    }
+    .mh1-menu-details { display: none !important; }
 }
-@media screen and ( max-width: 699px ) {
-    #mh1 #mh1-hamburger { display: inline-block !important; }
-    #mh1 #mh1-menus {
+@media screen and ( max-width: 545px ) {
+    #mh1-hamburger { display: inline-block !important; }
+    #mh1-menus {
         position: absolute;
         display: none;
         height: 0;
@@ -245,32 +204,30 @@
         float: none !important;
         left: 0 !important;
         right: 0 !important;
-        border: 2px solid white;
-        border-radius: 30px !important;
-        border-top-right-radius: 0px !important;
     }
-    #mh1 ul {
+    #mh1-menu {
         display: block !important;
         margin-left: 0 !important;
-        background-color: orange !important;
+        z-index: 400 !important;
+        background-color: yellow !important;
         left: 0 !important;
         right: 0 !important;
     }
-    #mh1 #mh1-menu a:hover {
+    #mh1-search {
+        display: block !important;
+        margin-left: 0 !important;
+        z-index: 400 !important;
         background-color: yellow !important;
+        left: 0 !important;
+        right: 0 !important;
     }
     #mh1 ul { display: block !important; }
-    #mh1 ul li { display: block; border-bottom: 1px solid white !important; }
-    #mh1 ul li > * { display: block !important; padding: 20px !important; padding-left: 20px !important; margin: 0 !important; }
-    #mh1 #mh1-search { float: none !important; }
+    #mh1 li { diplay: block; border-bottom: 1px solid white !important; }
+    #mh1 li > * { display: block !important; padding: 4px !important; padding-left: 20px !important; margin: 0 !important; }
+    #mh1-search { float: none !important; }
 
-    #mh1 .mh1-menu-details { display: inline-block; color: #666; }
+    .mh1-menu-details { display: inline; color: #666; }
 
-    #mh1 input[type="text"] {
-        width: 100% !important;
-        display: block !important;
-        padding: 4px !important;
-    }
 }
 
 </style>
@@ -280,113 +237,46 @@
     var ham = document.getElementById("mh1-hamburger");
     var menus = document.getElementById("mh1-menus");
     var banner = document.getElementById("mh1");
-    var html = document.getElementsByTagName("html")[0];
-    var wpadminbar = document.getElementById("wpadminbar");
     ham.addEventListener("click", function() {
         console.log(menus.style.display, menus.style.height);
         var menusShown = false;
         var menusCStyle = window.getComputedStyle(menus);
         var menusHeight = menusCStyle.height;
-        console.log("---- menusHeight", menusHeight);
         if (0 != parseInt(menusHeight)) menusShown = true;
         if (!menusShown) {
-            var bannerPosition = banner.style.position; // "absolute";
-            if ("" == bannerPosition) {
-                menus.style.position = "absolute";
-            } else {
-                menus.style.position = bannerPosition;
-            }
-            console.log("banner.style.position", banner.style.position);
-            console.log("menus.style.position", menus.style.position);
+            menus.style.position = "fixed";
+            // menus.style.left = "0 !important";
             var bannerBR = banner.getBoundingClientRect();
-            var menuTop = bannerBR.bottom;
-            console.log("bannerBR.bottom", bannerBR.bottom, "bannerBR.height", bannerBR.height);
-            menus.style.top = menuTop + "px";
-            console.log("menus.style.top", menus.style.top);
+            menus.style.top = bannerBR.bottom + "px";
             // Get height:        
             menus.style.visibility = "hidden";
             menus.style.display = "block";
             menus.style.height = "auto";
-            var mr = menus.getBoundingClientRect();
+            var r = menus.getBoundingClientRect();
             menus.style.visibility = null;
-            var newHeight = mr.height;
+            var newHeight = r.height;
             console.log("New height:", newHeight);
-            if ("absolute" == menus.style.position) {
-                var htmlMTopBcr = html.getBoundingClientRect().top;
-                console.log("htmlMarginTop from bcr", htmlMTopBcr);
-                var htmlMTopGcs = window.getComputedStyle(html).marginTop;
-                console.log("htmlMarginTop from gcs", htmlMTopGcs);
-                console.log("mr", mr, mr.top);
-                console.log("window.scrollY", window.scrollY);
-                menuTop += window.scrollY;
-                // Fix-me: For some reason I do not understand at all
-                // I have to subtract the height of wpadminbar here.
-                var wpBR = wpadminbar.getBoundingClientRect();
-                menuTop -= wpBR.height;
-                menus.style.top = menuTop + "px";
-                console.log("menus.style.top", menus.style.top);
-                // Tell we want the position again:
-                mr = menus.getBoundingClientRect();
-                // Fix-me: Did not help since getBoundingClientRect
-                // does not wait for display update.
-            }
             // Unfortunately this prevents transition,
             // but we can work around it by:
             // 1. Set a height:
             menus.style.height = "1px";
             // 2. Set the real height in a timeout:
-            setTimeout(function() {
-                menus.style.height = newHeight+"px";
-                menus.style.borderWidth = "2px";
-            }, 10);
+            setTimeout(function() { menus.style.height = newHeight+"px"; }, 10);
         } else {
             menus.style.height = "0";
-            menus.style.borderWidth = "0";
+            // menus.style.position = null;
         }
     });
 })();
 (function() {
-    var menus = document.getElementById("mh1-menus");
-
     var zField = document.getElementById("mh1-search-zotero");
-    zField.addEventListener("focus", function(ev) {
-        menus.style.height = "auto";
-    });
-    zField.addEventListener("keyup", function(ev) {
+    zField.addEventListener("keypress", function(ev) {
         if (13 == ev.keyCode) {
             var url = "http://ourcomments.org/psych/zfsp.html?q="+encodeURIComponent(zField.value);
-            // window.location.href = url;
-            var eA = document.createElement("a");
-            eA.setAttribute("href", url);
-            eA.setAttribute("target", "_blank");
-            eA.dispatchEvent(new MouseEvent("click"));
+            window.open(url);
         }
     });
-    var pField = document.getElementById("mh1-search-psyblog");
-    pField.addEventListener("focus", function(ev) {
-        menus.style.height = "auto";
-    });
-    pField.addEventListener("keyup", function(ev) {
-        if (13 == ev.keyCode) {
-            var url = "http://dl.dropboxusercontent.com/u/848981/it/cw/cse-psyblog.html?q="
-                +encodeURIComponent(pField.value);
-            // window.location.href = url;
-            var eA = document.createElement("a");
-            eA.setAttribute("href", url);
-            eA.setAttribute("target", "_blank");
-            eA.dispatchEvent(new MouseEvent("click"));
-        } else {
-            var len = pField.value.length;
-            if (0 == len) {
-                pField.style.backgroundImage = null;
-            } else {
-                pField.style.backgroundImage = "none";
-            }
-        }
-    });
-})();
 
-(function() {
     // You probably do not want to change this function, but just in
     // case I leave it here right under your eyes.. ;-)
 
@@ -440,13 +330,10 @@
         document.body.appendChild(eltAdminFake);
     } 
     var eAdmin = document.getElementById("wpadminbar");
-    var eHtml = document.getElementsByTagName("html")[0];
     function doResizing() {
-        console.log("doResizing ----------------");
-        var rMh1 = eMh1.getBoundingClientRect();
         function adjustHtmlMarginTop() {
             // mh1Height = jqMh1.outerHeight();
-            mh1Height = rMh1.height;
+            mh1Height = eMh1.getBoundingClientRect().height;
             console.log("mh1Height", mh1Height);
             var adminHeight = 0;
             if (!eltAdminFake) adminHeight = window.getComputedStyle(eAdmin).height;
@@ -459,14 +346,10 @@
             setHtmlMarginTop(newHtmlMarginTop);
         }
         adjustHtmlMarginTop();
-        var htmlWidth = eHtml.clientWidth;
-        console.log("htmlWidth", htmlWidth);
-        if (htmlWidth > 699) {
         var menus = document.getElementById("mh1-menus");
         menus.style.height = null;
         menus.style.display = null;
         menus.style.position = null;
-    }
     }
 
     // https://developer.mozilla.org/en-US/docs/Web/Reference/Events/resize
@@ -530,8 +413,7 @@
         doResizing
     );
     // Fix-me: This one does not work correctly - there is a 1px
-    // glitch. Tried a fake resize event. Did not correct it, but
-    // needed anyway.
+    // glitch. Try a fake resize event. Did not work.
     // 
     // adjustHtmlMarginTop();
     optimizedResize.fakeResize();
